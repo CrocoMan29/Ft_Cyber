@@ -50,6 +50,9 @@ def log_out(request):
 	logout(request)
 	return redirect('index')
 
+def play(request):
+	return render(request, 'game.html')
+
 def counter(request):
 	text = request.POST['text']
 	c_text = len(text.split())
